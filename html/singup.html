@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/singin_login.css">
+  <link rel="stylesheet" href="/css/Notification.css">
+  <title>Form Validation</title>
+
+</head>
+
+<body>
+  <div id="toast"></div>
+  <div class="main">
+
+    <form action="" method="POST" class="form" id="register-form">
+      <h3 class="heading">Đăng Kí</h3>
+      <div class="spacer"></div>
+      <div class="form-group">
+        <label for="fullname" class="form-label">Tên đầy đủ</label>
+        <input id="fullname" name="fullname" rules="required" type="text" placeholder="VD: KimBau" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="email" class="form-label">Email</label>
+        <input id="email" name="email" rules="required|email" type="text" placeholder="VD: kimbau@gmail.com"
+          class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Mật khẩu</label>
+        <input id="password" name="password" rules="required|min:6|beConfirm:#password_confirmation" type="password"
+          placeholder="Nhập mật khẩu" class="form-control">
+        <span class="form-message"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="password_confirmation" class="form-label">Nhập lại mật khẩu</label>
+        <input id="password_confirmation" name="password_confirmation" rules="required|confirm:#password"
+          placeholder="Nhập lại mật khẩu" type="password" class="form-control">
+        <span class="form-message"></span>
+      </div>
+      <div class="form-group">
+        <div class="box"> <a href="/html/login.html">Đăng nhập ngay</a></div>
+
+      </div>
+      <button class="form-submit">Đăng ký</button>
+    </form>
+
+  </div>
+  <script src="/js/Notification.js"></script>
+  <script src="/js/singup_login.js"></script>
+
+  <script>
+    const apiUser = "http://localhost:3000/user";
+
+    const username = document.getElementById("fullname");
+    const password = document.getElementById("password");
+    var form = new Validator('#register-form')
+
+    const getUser = async () => {
+      const response = await fetch(apiUser);
+      const data = await response.json();
+      return data;
+    };
+
+
+    form.onSubmit = function (formData) {
+
+      getUser().then((data) => {
+        const userr = data.find(
+          (userr) =>
+            userr.username == username.value);
+        if (userr ) {
+
+          toast({
+            title: "Thất bại!",
+            message: "Tài Khoản Đã Tồn Tại !",
+            type: "error",
+            duration: 5000
+          });
+        }
+
+        else {
+          setTimeout(function () {
+          const users = {
+            username: username.value,
+            password: password.value,
+          };
+
+          fetch(apiUser, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(users),
+          })
+            .then((response) => response.json())
+            .then((data) => console.log(data))
+          }, 5000);
+          toast({
+              title: "Thành công!",
+              message: "Bạn đã đăng ký thành công !",
+              type: "success",
+              duration: 5000
+          });
+           
+        }
+      });
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+@media only screen and (max-width:46.1875em)
+{
+  
+
+    header{
+         padding: 0px;
+    }
+    .tasbar{
+      display: none;
+    }
+    .content_main{
+      display: block;
+    }
+    .category{
+       display: none;
+    }
+    .banner_login a button{
+        display: none;
+    }
+    .banner_login{
+        margin-left: 0px;
+        width: fit-content;
+        display: flex;
+      }
+      .main_banner_login{
+        display: flex;
+        justify-content: left;
+      }
+      .btn_banner{
+        display: block;
+      }
+      .switch{
+        margin-left: 0px;
+        margin-right: 60px;
+      }
+      
+      .list_content{
+        width: 450px;
+      }
+      .rows_cards{
+        display: flex;
+        justify-content: center;
+      }
+      .switch_page{
+        width: 50%;
+      }
+      .content_site{
+        width: fit-content;
+      }
+      .main_mobile{
+        width: 70%;
+        background-color:  #315dc4;
+        z-index: 1000;
+       
+      }
+      .active_banner{
+        left: 0;
+      
+      }
+}

@@ -1,0 +1,236 @@
+.btn_banner {
+  color: #fff;
+  font-size: 25px;
+  display: none;
+  margin: 0 0 20px 20px;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+html {
+  height: 1px;
+}
+
+header {
+  width: auto;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 70px;
+  background: #0b2239;
+}
+
+
+header .header-left {
+  display: flex;
+  align-items: center;
+}
+
+header .header-left .logo img {
+  height: 30px;
+  width: 120px;
+}
+
+header .header-left nav ul {
+  display: flex;
+}
+
+.yellow-button a,
+nav ul li a {
+  display: block;
+  color: #cfd9e0;
+  font-size: 18px;
+  padding: 5px 20px;
+  transition: 0.2s;
+  text-decoration: none;
+  position: relative;
+}
+
+nav ul {
+  padding: 15px 0px;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #fff;
+}
+
+nav ul li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1.5px;
+  background-color: white;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transition: width 0.3s ease-in-out;
+  transform: translateX(-50%);
+}
+
+
+nav ul li a:hover::after {
+  width: 80%;
+}
+
+.yellow-button {
+  background-color: yellow;
+  border: none;
+
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.yellow-button a {
+  color: black;
+}
+
+.search_icon {
+  position: relative;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 15px 10px;
+}
+
+.search_icon:hover {
+  background-color: rgb(194, 162, 162);
+}
+
+.main_banner_login {
+  display: flex;
+  justify-content: center;
+}
+
+.banner_login {
+  margin-left: 80px;
+  width: fit-content;
+  display: flex;
+}
+
+.banner_login nav ul {
+  display: flex;
+  margin-bottom: 0;
+}
+
+.banner_login nav ul li a {
+  font-size: 12px;
+  color: #cfd9e0;
+}
+
+.space {
+  width: 100px;
+}
+
+.banner_login nav ul li a:hover::after {
+  width: 0%;
+
+}
+
+.banner_login nav ul li a:hover {
+  color: aqua;
+}
+
+.main_banner_login {
+  border-bottom: 1px solid #ccc;
+  ;
+}
+
+
+.banner_slider {
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+
+  text-align: center;
+  padding: 3px;
+  height: auto;
+  background-color: gray;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/* background white */
+.white-mode .banner_card h4,
+.white-mode .banner_login nav ul li a {
+  color: black;
+}
+
+
+.main_mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -600px;
+  bottom: 0;
+  width: 320px;
+  max-width: 100%;
+  background-color: aliceblue;
+  padding-right: 32px;
+  transition: 0.5s;
+}
+
+.main_mobile li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.main_mobile li a:hover {
+  color: #ccc;
+}
+
+.main_mobile li {
+  padding: 25px 0 25px 0;
+  border-bottom: 1px solid rgb(183, 181, 181);
+}
+
+
+
+
+.main_mobile .btn_mobile {
+  display: flex;
+}
+
+.main_mobile .icon_mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  transition: transform 0.3s ease;
+  padding: 30px 0 30px 0;
+  color: #fff;
+}
+
+.main_mobile .icon_mobile:hover {
+  transform: rotate(100deg);
+}

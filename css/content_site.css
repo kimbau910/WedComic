@@ -1,0 +1,423 @@
+.content_main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+
+.content_site {
+  position: relative;
+  width: 800px;
+}
+
+/* banner card */
+.banner_card {
+  width: auto;
+  display: flex;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #fff;
+}
+
+.loader {
+  height: 50px;
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+}
+
+.bar {
+  height: 5px;
+  width: 12px;
+  animation-duration: 0.45s;
+  animation-name: changeHeight;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.red {
+  background-color: #E50000;
+  box-shadow: 1px 1px 10px #E50000;
+  animation-delay: 0.10s;
+}
+
+.orange {
+  background-color: #FF8D00;
+  box-shadow: 1px 1px 10px #FF8D00;
+  animation-delay: 0.20s;
+}
+
+.yellow {
+  background-color: #FFEE00;
+  box-shadow: 1px 1px 10px #FFEE00;
+  animation-delay: 0.25s;
+}
+
+.green {
+  background-color: #008121;
+  box-shadow: 1px 1px 10px #008121;
+  animation-delay: 0.30s;
+}
+
+.blue {
+  background-color: #004CFF;
+  box-shadow: 1px 1px 10px #004CFF;
+  animation-delay: 0.35s;
+}
+
+.violet {
+  background-color: #760188;
+  box-shadow: 1px 1px 10px #760188;
+  animation-delay: 0.40s;
+}
+
+@keyframes changeHeight {
+  from {
+    height: 5px;
+  }
+
+  to {
+    height: 40px;
+  }
+}
+
+
+.banner_card h4 {
+  margin: 20px 0 0 20px;
+  color: #fff;
+}
+
+
+
+/* card */
+.list_content{
+  width: fit-content;
+}
+.rows_cards {
+  display: flex;
+  justify-content: center;
+}
+
+.cards {
+  width: 180px;
+  height: 250px;
+  transition: all 300ms;
+  margin: 0 20px 100px 0;
+}
+.cards a {
+  text-decoration: none;
+}
+.cards a  p:hover{
+  color: #008cff;
+}
+.cards a img {
+  width: 100%;
+  height: 240px;
+}
+
+.cards:hover {
+  opacity: 0.8;
+  transform: scale(1.01);
+}
+
+.title_cards p {
+  color: #fff;
+  padding: 10px 0;
+  margin-bottom: 0;
+}
+
+.btn_card {
+  display: flex;
+}
+
+.btn_card button {
+  padding: 5px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 9px;
+  font-weight: 500;
+  color: black;
+  text-shadow: none;
+  background: transparent;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+  background-color: #f0efef;
+}
+
+#btn:hover,
+#btn:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff,
+    0 0 10px #ffffff,
+    0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff,
+    0 0 20px #008cff,
+    0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+
+.btn_card .time_chapter {
+  color: #6d6b6b;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.switch_page{
+  width: 100%;
+  display: flex; 
+  justify-content: center;
+}
+
+
+/* Sidebar */
+
+/* .list_sidebar {
+  width: 380px;
+  border: 1px solid #fff;
+} */
+
+
+.list_history {
+  margin-left: 30px;
+  width: 320px;
+  height: fit-content;
+  border: 1px solid #fff;
+}
+
+/* loader history */
+
+.loader_history {
+  font-size: 25px;
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #41cdcf;
+  letter-spacing: 2px;
+  position: relative;
+  box-sizing: border-box;
+  margin: 10px 0 20px 20px;
+}
+
+.loader_history::after {
+  content: 'Lịch Sử Đọc Truyện';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #263238;
+  text-shadow: 0 0 2px #FFF, 0 0 1px #32a9bb, 0 0 1px #FFF;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: animloader 6s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
+
+/* card history */
+
+.card_list_history {
+
+  width: 100%;
+  max-width: 290px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  margin: 10px 0 30px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+
+}
+
+.card_list_top_comic:hover,
+.card_list_history:hover {
+  cursor: pointer;
+  transform: scale(1.04);
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+}
+
+.card_list_history:hover>.img {
+  transition: 0.5s ease-in-out;
+  background: linear-gradient(#9198e5, #712020);
+}
+
+.textBox {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span {
+  font-size: 10px;
+}
+
+.Name_History {
+  margin-bottom: 0px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.link_history {
+  font-size: 12px;
+  font-weight: lighter;
+  text-decoration: none;
+  color: #6d6b6b;
+}
+
+/* button seemore */
+
+.seemore {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_seemore {
+  padding: 5px 50px;
+  border: unset;
+  border-radius: 15px;
+  color: #212121;
+  z-index: 1;
+  background: #e8e8e8;
+  position: relative;
+  font-weight: 1000;
+  font-size: 15px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.btn_seemore::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color: #212121;
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms
+}
+
+.btn_seemore:hover {
+  color: #e8e8e8;
+}
+
+.btn_seemore:hover::before {
+  width: 100%;
+}
+
+
+.TopComic {
+  display: flex;
+  justify-content: center;
+    margin: 50px 0 0 30px;
+  width: 315px;
+  height: fit-content;
+  border: 1px solid #fff;
+
+  
+}
+
+.btnTop button {
+  width: 100px;
+  height: 40px;
+  background-color: #414447;
+  border-bottom-width: 0px;
+  color: white;
+  float: left;
+  border-top: 2px solid #fff;
+  border-right: 0.5px solid #efefef;
+}
+
+.btnTop button:hover {
+  border-top: 2px solid orangered;
+  color: orange;
+}
+
+.textContent svg {
+  height: 50px;
+  width: 20px;
+
+}
+
+.stt_top {
+  font-size: 20px;
+  color: gray;
+}
+
+.span_views {
+  font-size: 12px;
+  padding-right: 20px;
+}
+
+.comic {
+  text-decoration: none;
+  color: #4f829c;
+}
+
+.card_list_top_comic {
+  margin:1px 0 5px 0;
+  width: 300px;
+  height: 70px;
+  background: #353535;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+  border-bottom: 1px solid #fff;
+}
+
+.stt_top {
+  padding: 10px 0 0 10px;
+}
+
+
+/* background white */
+.white-mode .banner_card
+{
+  border-bottom: 2px solid gray;
+}
+
+.white-mode .title_cards p {
+  color: black;
+}
+.white-mode .TopComic,
+.white-mode .list_history {
+  border: 1px solid gray;
+}
+

@@ -1,0 +1,158 @@
+body{
+  background-color: #0e0e10;
+  position: relative;
+  top: 0;
+  transition: 0.3s;
+
+}
+ .unhide{
+    top:-100px;
+    transition: 0.3s;
+  }
+
+
+ /* Search  */
+.textSearch{
+    padding: 20px 0;
+    background: #0b2239;
+    display: flex;
+    justify-content: center;
+    height: 110px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+}
+.input {
+  width: 400px;
+  height: 120%;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #53535f;
+  caret-color: #f7f7f8;
+  color: #fff;
+  padding: 7px 10px;
+  border: 2px solid transparent;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  margin-right: 1px;
+  transition: all .2s ease;
+}
+
+.input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.input:focus {
+  border: 2px solid #a970ff;
+  background-color: #0e0e10;
+}
+
+.search__btn {
+  border: none;
+  cursor: pointer;
+  background-color: rgba(42, 42, 45, 1);
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  height: 120%;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search__btn:hover {
+  background-color: rgba(54, 54, 56, 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Switch background */
+
+
+
+.switch input {
+    display: none;
+  }
+  
+  .switch{
+    margin:0  30px 10px 30px;
+  }
+  .switchh {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 24px;
+    background: #4d4d4d;
+    border-radius: 100px;
+    padding: 0 2px;
+    transition: .3s;
+    cursor: pointer;
+    position: relative;
+   
+  }
+  
+  
+  .slider {
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 100px;
+    transition: .3s;
+    border: 1px solid transparent;
+    z-index: 1000;
+  }
+  
+  .icon {
+    display: block;
+    position: absolute;
+    transition: .3s;
+  }
+  
+  .sun {
+    right: 2px;
+    opacity: 1;
+  }
+  
+  .moon {
+    left: 2px;
+    opacity: 0;
+  }
+  
+  .switch:hover .slider, .switch:focus .slider {
+    border: 1px solid #4d4d4d;
+    box-shadow: 0 0 2px 3px #86d46b;
+  }
+  
+  .switch:active .slider {
+    box-shadow: 0 0 5px 5px #86d46b;
+  }
+  
+  .switch input:checked+.slider {
+    transform: translateX(26px);
+  }
+  
+  .switch input:checked~.moon {
+    opacity: 1;
+  }
+  
+  .switch input:checked~.sun {
+    opacity: 0;
+  }
+
+

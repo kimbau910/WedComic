@@ -1,0 +1,321 @@
+.content_details {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.link_details {
+  display: flex;
+  color: gray;
+}
+
+.link_details a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: gray;
+}
+
+.introduce_details {
+  display: flex;
+  width: 1040px;
+}
+
+.box_img img {
+  width: 250px;
+  height: 300px;
+
+}
+
+.summary {
+  margin-left: 50px;
+
+}
+
+.start {
+  display: flex;
+}
+
+.rating:not(:checked)>input {
+  position: absolute;
+  appearance: none;
+}
+
+.rating:not(:checked)>label {
+  float: right;
+  cursor: pointer;
+  font-size: 35px;
+  color: #666;
+}
+
+.rating:not(:checked)>label:before {
+  content: '★';
+}
+
+.rating>input:checked+label:hover,
+.rating>input:checked+label:hover~label,
+.rating>input:checked~label:hover,
+.rating>input:checked~label:hover~label,
+.rating>label:hover~input:checked~label {
+  color: #e58e09;
+}
+
+.rating:not(:checked)>label:hover,
+.rating:not(:checked)>label:hover~label {
+  color: #ff9e0b;
+}
+
+.rating>input:checked~label {
+  color: #ffa723;
+}
+
+
+
+.sumary_details {
+  display: flex;
+  line-height: 35px;
+}
+
+.summary_left {
+  margin-right: 50px;
+}
+
+.start_vote {
+  padding-top: 15px;
+  padding-left: 30px;
+}
+
+.post_status {}
+
+.post_status {
+  display: flex;
+
+}
+
+.post_save,
+.post_cmt {
+  color: rgb(15, 142, 221);
+  height: fit-content;
+  padding: 0px 20px;
+  font-size: 30px;
+  border-right: 2px solid #fff;
+}
+
+.post_save p,
+.post_cmt p {
+  height: 10px;
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 0px;
+}
+
+.post_save p {
+  line-height: 20px;
+}
+
+.post_save i {
+  padding-bottom: 10px;
+}
+
+.post_save {
+  border-right: none;
+  width: 130px;
+  text-align: center;
+}
+
+.select_chapter {
+  display: flex;
+  justify-content: center;
+}
+
+.select_chapter button {
+  height: 40px;
+  width: 80px;
+  margin-left: 20px;
+  border-radius: 5px;
+  background-color: rgb(33, 108, 207);
+  color: white;
+  border: none;
+
+}
+
+/* page_content */
+.page_content_main{
+  display: flex;
+  margin-top: 150px;
+}
+.page_content {
+ 
+  width:700px;
+}
+
+.page_content_icon {
+  width: 100%;
+  border-bottom: 2px solid #fff;
+  display: flex;
+  
+}
+
+.page_content_icon i {
+  position: relative;
+  align-items: center;
+  height: 30px;
+  width: 30px;
+  background-color: #0f70d7;
+  top: 10px;
+  border-bottom: 1px solid #0f70d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.page_content_icon p{
+margin: 5px 0 0 20px;
+  font-size: 24px;
+ 
+}
+.content_title{
+  padding-top: 20px;
+  color: gray;
+}
+
+.list_chapter ul{
+padding-left: 0px;
+}
+.one_list_chapter{
+  display: flex;padding: 20px 0 20px 0;
+}
+
+.one_list_chapter li{   
+width: 450px;
+}
+
+.one_list_chapter li a{
+  text-decoration: none;
+  color: aliceblue;
+}
+.one_list_chapter li a:hover{
+  color: #0f70d7;
+}
+.one_list_chapter p,
+.one_list_chapter span{
+  margin-top: 10px;
+  font-size: 14px;
+  color: gray;
+  width: 250px;
+}
+
+
+
+#more_list_chapter{
+  width: 100%;
+  height: 50px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#more_list_chapter button{
+  background:none;
+  border: none;
+  color: #fff;
+}
+
+#more_list_chapter button:hover{
+  text-decoration: underline;
+}
+
+.hinde{
+  display: none;
+}
+
+
+
+#comment-box{
+  margin-top: 20px;
+  width: 100%;
+  height: 150px;
+  resize: none;
+}
+.comment input{
+  background:none ;
+  height: 40px;
+  width: 60%;
+  border: 1px solid #666;
+}
+
+.comment button{
+  height: 40px;
+  width: 80px;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+  background-color: rgb(33, 108, 207);
+  color: white;
+  border: none;
+}
+
+
+.ciau4{
+  width: 22%;
+}
+.ciau_space{
+  width: 4%;
+}
+.hihi{
+  margin-top: 20px;
+  display: flex;
+  margin-bottom: 20px;
+}
+.hehe{
+  
+  display: flex;
+}
+.hehe p{
+  font-size: 10px;
+  color: gray;
+}
+.hehe h1{
+  font-size: 12px;
+}
+.hehe img{
+  height: 120px; 
+}
+
+.hehe a{
+  text-decoration: none;
+  color: #fff;
+}
+
+/* background white */
+.white-mode .link_banner h3 {
+  color: black;
+}
+.white-mode .start_vote h5,
+.white-mode .summary_left nav ul li{
+  color: black;
+}
+.white-mode .page_content_icon p {
+  color: black;
+}
+.white-mode .page_content_icon{
+  border-bottom: 2px solid gray;
+}
+
+.white-mode .one_list_chapter li a{
+  color: black;
+}
+
+.white-mode #more_list_chapter {
+  border: 1px solid gray;
+}
+
+.white-mode #more_list_chapter button{
+  color: black;
+}
+
+.white-mode .hehe h1{
+  color: black;
+}
+
+
