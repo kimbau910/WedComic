@@ -421,3 +421,38 @@
   border: 1px solid gray;
 }
 
+.hopphanloai{
+  padding: 5px;
+  color: white;
+  border: 1px solid #fff;
+  margin-bottom: 30px;
+}
+.button3{
+display: flex;
+justify-content: center;
+margin-left: 50px;
+margin-bottom: 30px;
+}
+.button3 button{
+  padding: 5px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+.hop9{
+  margin-bottom: 30px;
+}
+.button9{
+  display: flex;
+  justify-content: center;
+  }
+  
+.button9 button{
+  width: 120px;
+  padding: 5px;
+  margin-left: 20px;
+  border-radius: 10px;
+}
+.button9 button:hover{
+  color: orange;
+}
+

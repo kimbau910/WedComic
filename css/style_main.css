@@ -46,7 +46,7 @@ header .header-left nav ul {
 }
 
 .yellow-button a,
-nav ul li a {
+nav > ul > li> a {
   display: block;
   color: #cfd9e0;
   font-size: 18px;
@@ -56,20 +56,20 @@ nav ul li a {
   position: relative;
 }
 
-nav ul {
+nav > ul {
   padding: 15px 0px;
 }
 
-nav ul li {
+nav > ul > li {
   list-style-type: none;
 }
 
-nav ul li a:hover,
-nav ul li a.active {
+nav > ul > li :hover,
+nav > ul > li >  a.active {
   color: #fff;
 }
 
-nav ul li a::after {
+nav > ul > li > a::after {
   content: '';
   display: block;
   width: 0;
@@ -83,7 +83,7 @@ nav ul li a::after {
 }
 
 
-nav ul li a:hover::after {
+nav > ul > li > a:hover::after {
   width: 80%;
 }
 
@@ -120,6 +120,43 @@ nav ul li a:hover::after {
   background-color: rgb(194, 162, 162);
 }
 
+
+
+.down_category {
+  position: relative;
+
+}
+
+.box_category {
+  display: none  ;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.box_category   div{
+  
+ float: left;
+  width: fit-content;
+  height: 310px;
+}
+.box_category ul li{
+  padding: 25px;
+}
+ .box_category ul li a {
+  color: black;
+ 
+  font-size: 17px;
+  text-decoration: none;
+}
+nav  li:hover .box_category {
+  display: block;
+}
+.box_category ul li a:hover {
+  color: aqua;
+}
+ 
+
 .main_banner_login {
   display: flex;
   justify-content: center;
@@ -136,7 +173,7 @@ nav ul li a:hover::after {
   margin-bottom: 0;
 }
 
-.banner_login nav ul li a {
+.banner_login nav > ul > li > a {
   font-size: 12px;
   color: #cfd9e0;
 }
@@ -145,7 +182,7 @@ nav ul li a:hover::after {
   width: 100px;
 }
 
-.banner_login nav ul li a:hover::after {
+.banner_login nav > ul > li > a:hover::after {
   width: 0%;
 
 }

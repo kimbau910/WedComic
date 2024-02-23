@@ -21,3 +21,7 @@ const bodyy = document.querySelector("body");
 btn.onclick = function(){
   bodyy.classList.toggle("unhide");
 }
+// function showDropdown() {
+//   var dropdown = document.getElementsByClassName(".box_category");
+//   box_category.style.display = "block";
+// }
