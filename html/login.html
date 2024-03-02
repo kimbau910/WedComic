@@ -10,6 +10,7 @@
     crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/singin_login.css">
   <link rel="stylesheet" href="/css/Notification.css">
+
   <title>Form Validation</title>
 
 </head>
@@ -41,18 +42,52 @@
         </div>
       </div>
 
-      <button class="form-submit">Đăng nhập</button>
+      <button class="form-submit" onclick="defaultacc()">Đăng nhập</button>
     </form>
 
+    <div class="box">
+      Vì json này e tạo nó chỉ chạy trên local tải về mới singin , singup được.
+      nên e cung cấp 1 tài khoản mặc định là 
+      tk:admin
+      pass:111111
+    </div>
   </div>
 
   <script src="/js/singup_login.js"></script>
   <script src="/js/Notification.js"></script>
+  
   <script>
+
+const usernamee = document.getElementById("fullname");
+    const passwordd = document.getElementById("password");
+      const useradmin = "admin"
+      const passadmin = 111111
+      function defaultacc(){
+        if (useradmin == usernamee.value && passadmin == passwordd.value) {
+          toast({
+            title: "Thành công!",
+            message: "Bạn đã đăng nhập thành công!",
+            type: "success",
+            duration: 5000
+          });
+          setTimeout(function () {
+            window.location.pathname = "index.html";
+          }, 2000);
+        }
+        else {
+          toast({
+            title: "Thất bại!",
+            message: "Tài Khoản hoặc Mật Khẩu không chính xác !",
+            type: "error",
+            duration: 5000
+          });
+        }
+      }
 
     let apiUser = "http://localhost:3000/user";
     const username = document.getElementById("fullname");
     const password = document.getElementById("password");
+
     var form = new Validator('#register-form')
     const getUser = async () => {
       const response = await fetch(apiUser);
@@ -73,18 +108,19 @@
             duration: 5000
           });
           setTimeout(function () {
-            window.location.href = "main.html";
+            window.location.pathname = "index.html";
           }, 2000);
         }
 
-        else {
-          toast({
-            title: "Thất bại!",
-            message: "Tài Khoản hoặc Mật Khẩu không chính xác !",
-            type: "error",
-            duration: 5000
-          });
-        }
+        
+        // else {
+        //   toast({
+        //     title: "Thất bại!",
+        //     message: "Tài Khoản hoặc Mật Khẩu không chính xác !",
+        //     type: "error",
+        //     duration: 5000
+        //   });
+        // }
       });
     }
 
